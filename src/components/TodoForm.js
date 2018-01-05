@@ -4,10 +4,12 @@ class TodoForm extends Component {
   render () {
     return (
       <div>
-        TODOSFORM
+        <input />
+        <button>Add Todo</button>
       </div>
     )
   }
+
 }
 
 export default TodoForm
