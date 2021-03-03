@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import {toggleTodo} from '../actions/todoActions'
 
 function Todos(props) {
  
@@ -7,7 +8,11 @@ function Todos(props) {
       <div>
         <ul>
           {props.todos.map(todo => (
-            <li key={todo.id}>{todo.task}: {todo.completed.toString()}</li>
+            <li key={todo.id}
+                onClick={() => props.toggleTodo(todo.id)}
+            >
+            {todo.task}: {todo.completed.toString()}
+            </li>
           ))}
         </ul>
       </div>
