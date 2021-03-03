@@ -18,6 +18,8 @@ const defaultState = [
 
 function todos (state = defaultState, action) {
     switch(action.type) {
+        case 'ADD_TODO':
+            return [...state, action.todo]
         default:
             return state
     }
