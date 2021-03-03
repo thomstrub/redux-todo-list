@@ -22,7 +22,7 @@ class TodoForm extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input
-          onChange={this.handleSubmit}
+          onChange={this.handleChange}
           value={this.state.newTodo}
         />
         <button>Add Todo</button>
@@ -32,4 +32,4 @@ class TodoForm extends Component {
 
 }
 
-export default TodoForm
+export default connect(null, {addTodo})(TodoForm)
