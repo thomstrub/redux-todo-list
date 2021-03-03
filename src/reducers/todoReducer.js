@@ -1,7 +1,7 @@
 const defaultState = [
     {
         id: 0,
-        tast: 'Test this Todo Page',
+        task: 'Test this Todo Page',
         completed: false
     },
     {

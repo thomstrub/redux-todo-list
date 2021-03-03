@@ -1,20 +1,18 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-class Todos extends Component {
+function Todos(props) {
  
-  render () {
     return (
       <div>
         <ul>
-          {this.props.todos.map(todo => (
+          {props.todos.map(todo => (
             <li key={todo.id}>{todo.task}: {todo.completed.toString()}</li>
           ))}
         </ul>
       </div>
     )
   }
-}
 
 const mapStateToProps = (state) => {
   return {
