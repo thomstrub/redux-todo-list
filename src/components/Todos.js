@@ -25,4 +25,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(Todos)
+export default connect(mapStateToProps, {toggleTodo})(Todos)
