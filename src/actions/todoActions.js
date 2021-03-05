@@ -16,3 +16,10 @@ export function toggleTodo (id){
         id
     }
 }
+
+export function deleteTodo(id){
+    return {
+        type: 'DELETE_TODO',
+        id
+    }
+}
