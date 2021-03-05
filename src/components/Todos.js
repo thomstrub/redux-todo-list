@@ -14,7 +14,9 @@ function Todos(props) {
             >
             {todo.task}: {todo.completed.toString()}
             </li>
-            <button key={`delete${todo.id}`}onClick={() => props.deleteTodo(todo.id)}>X</button>
+            <button key={`delete${todo.id}`} 
+                    onClick={() => props.deleteTodo(todo.id)}
+                    >X</button>
             </>
           ))}
         </ul>
@@ -28,4 +30,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps, {toggleTodo})(Todos)
+export default connect(mapStateToProps, {toggleTodo, deleteTodo})(Todos)

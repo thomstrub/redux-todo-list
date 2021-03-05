@@ -28,6 +28,10 @@ function todos (state = defaultState, action) {
                 return todo;
             })
             return newState
+        case 'DELETE_TODO':
+            console.log(action.id, "id")
+            return state
+            
         default:
             return state
     }
