@@ -29,14 +29,8 @@ function todos (state = defaultState, action) {
             })
             return newState
         case 'DELETE_TODO':
-            const deleteState = state.map(todo => {
+            const deleteState = state.filter(item => item.id !== action.id);
                 
-                if(todo.id !== action.id) {
-                    console.log("delete firing action", action, "todo", todo)
-                    
-                }
-                
-            })
             return deleteState
             
         default:
