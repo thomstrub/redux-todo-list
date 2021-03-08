@@ -8,7 +8,7 @@ function Todos(props) {
       <div>
         <ul>
           {props.todos.map(todo => (
-            <>
+            <div>
             <li key={todo.id}
                 onClick={() => props.toggleTodo(todo.id)}
             >
@@ -17,7 +17,7 @@ function Todos(props) {
             <button key={`delete${todo.id}`} 
                     onClick={() => props.deleteTodo(todo.id)}
                     >X</button>
-            </>
+            </div>
           ))}
         </ul>
       </div>

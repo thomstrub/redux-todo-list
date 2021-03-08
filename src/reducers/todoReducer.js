@@ -30,8 +30,10 @@ function todos (state = defaultState, action) {
             return newState
         case 'DELETE_TODO':
             const deleteState = state.map(todo => {
+                
                 if(todo.id !== action.id) {
-                    return todo;
+                    console.log("delete firing action", action, "todo", todo)
+                    
                 }
                 
             })
